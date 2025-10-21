@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Little Lemon</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Little Lemon Restaurant Menu">
+    <title>Little Lemon</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
   <body>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a> |
       <a href="about.html">About Us</a>
     </nav>
 
-    <h1>Our Menu</h1>
+    <main>
+      <h1>Our Menu</h1>
 
-    <h2 onclick="toggleIngredients('falafel')">Falafel</h2>
-    <p id="falafel">Chickpea, herbs, and spices</p>
+      <section>
+        <h2>
+          <button type="button" onclick="toggleIngredients('falafel')" aria-controls="falafel" aria-expanded="false" style="all:unset;cursor:pointer;">Falafel</button>
+        </h2>
+        <p id="falafel">Chickpea, herbs, and spices</p>
+      </section>
 
-    <h2 onclick="toggleIngredients('pasta')">Pasta Salad</h2>
-    <p id="pasta">Lettuce, vegetables, and mozzarella</p>
+      <section>
+        <h2>
+          <button type="button" onclick="toggleIngredients('pasta')" aria-controls="pasta" aria-expanded="false" style="all:unset;cursor:pointer;">Pasta Salad</button>
+        </h2>
+        <p id="pasta">Lettuce, vegetables, and mozzarella</p>
+      </section>
+    </main>
 
     <footer>
       <p><em>“This menu is a blessing. Each dish is a legacy.  
